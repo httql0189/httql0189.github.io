@@ -1,0 +1,675 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+<!-- Basic Page Needs
+================================================== -->
+<title>Hireo</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<!-- CSS
+================================================== -->
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/colors/blue.css">
+<link rel="stylesheet" href="css/search.css">
+<style>
+	/* Absolute Center CSS Spinner */
+.loading {
+  position: fixed;
+  z-index: 999;
+  height: 2em;
+  width: 2em;
+  overflow: show;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/* Transparent Overlay */
+.loading:before {
+  content: '';
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+}
+
+/* :not(:required) hides these rules from IE9 and below */
+.loading:not(:required) {
+  /* hide "loading..." text */
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+.loading:not(:required):after {
+  content: '';
+  display: block;
+  font-size: 10px;
+  width: 0.5em;
+  height: 0.5em;
+  margin-top: -0.5em;
+  -webkit-animation: spinner 1500ms infinite linear;
+  -moz-animation: spinner 1500ms infinite linear;
+  -ms-animation: spinner 1500ms infinite linear;
+  -o-animation: spinner 1500ms infinite linear;
+  animation: spinner 1500ms infinite linear;
+  border-radius: 0.5em;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.75) 1.5em 0 0 0, rgba(0, 0, 0, 0.75) 1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) 0 1.5em 0 0, rgba(0, 0, 0, 0.75) -1.1em 1.1em 0 0, rgba(0, 0, 0, 0.5) -1.5em 0 0 0, rgba(0, 0, 0, 0.5) -1.1em -1.1em 0 0, rgba(0, 0, 0, 0.75) 0 -1.5em 0 0, rgba(0, 0, 0, 0.75) 1.1em -1.1em 0 0;
+  box-shadow: rgba(0, 0, 0, 0.75) 1.5em 0 0 0, rgba(0, 0, 0, 0.75) 1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) 0 1.5em 0 0, rgba(0, 0, 0, 0.75) -1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) -1.5em 0 0 0, rgba(0, 0, 0, 0.75) -1.1em -1.1em 0 0, rgba(0, 0, 0, 0.75) 0 -1.5em 0 0, rgba(0, 0, 0, 0.75) 1.1em -1.1em 0 0;
+}
+
+/* Animation */
+
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+</style>
+</head>
+<body class="gray">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+<!-- Header Container
+================================================== -->
+<header id="header-container" class="fullwidth">
+	<div class="loading">Loading&#8230;</div>
+	<!-- Header -->
+	<div id="header">
+		<div class="container">
+			
+			<!-- Left Side Content -->
+			<div class="left-side">
+				
+				<!-- Logo -->
+				<div id="logo">
+					<a href="index.html"><img src="images/logo.png" alt=""></a>
+				</div>
+
+				<!-- Main Navigation -->
+				<nav id="navigation">
+					<ul id="responsive">
+
+						<li><a href="index.html">Home</a>
+							
+						</li>
+
+						<li><a href="#" class="current">Courses</a>
+							
+						</li>
+
+						
+					</ul>
+				</nav>
+				<div class="clearfix"></div>
+				<!-- Main Navigation / End -->
+				
+			</div>
+			<!-- Left Side Content / End -->
+
+
+			<!-- Right Side Content / End -->
+			<div class="right-side">
+
+				<!--  User Notifications -->
+				<div class="header-widget hide-on-mobile">
+					
+					<div class="keyword-input-container autocomplete" style="
+					margin-top: 15px;
+					width: 400px;
+					">
+						<input id="intro-keywords" type="text" class="keyword-input" placeholder="Search for 2,000 courses">
+						<button class="keyword-input-button ripple-effect" onclick="searchResult()"><i class="icon-feather-search"></i></button>
+					</div>
+				</div>
+				<!--  User Notifications / End -->
+
+				<!-- User Menu -->
+				<div class="header-widget" id="logininfo">
+
+					<a href="#sign-in-dialog" class="popup-with-zoom-anim log-in-button"><i class="icon-feather-log-in"></i> <span>Log In / Register</span></a>
+					<!-- Messages -->
+					<div id="user-dropdown" class="header-notifications user-menu">
+						<div class="header-notifications-trigger">
+							<a href="#"><div class="user-avatar status-online"><img src="https://i.9mobi.vn/cf/Images/son/2020/3/26/cach-lam-anh-dai-dien-facebook-trong-khong-14.jpg" alt=""></div></a>
+						</div>
+
+						<!-- Dropdown -->
+						<div class="header-notifications-dropdown">
+
+							<!-- User Status -->
+							<div class="user-status">
+
+								<!-- User Name / Avatar -->
+								<div class="user-details">
+									<div class="user-avatar status-online"><img src="https://i.9mobi.vn/cf/Images/son/2020/3/26/cach-lam-anh-dai-dien-facebook-trong-khong-14.jpg" alt=""></div>
+									<div class="user-name" id='username'>
+										
+									</div>
+								</div>
+								
+					
+						</div>
+						
+						<ul class="user-menu-small-nav">
+							<li><a href="dashboard.html"><i class="icon-material-outline-dashboard"></i> Dashboard</a></li>
+							<li><a href="dashboard-settings.html"><i class="icon-material-outline-settings"></i> Settings</a></li>
+							<li><a onclick="logout()" style="cursor: pointer;"><i class="icon-material-outline-power-settings-new"></i> Logout</a></li>
+						</ul>
+
+						</div>
+					</div>
+				</div>
+				<!-- User Menu / End -->
+
+				<!-- Mobile Navigation Button -->
+				<span class="mmenu-trigger">
+					<button class="hamburger hamburger--collapse" type="button">
+						<span class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						</span>
+					</button>
+				</span>
+
+			</div>
+			<!-- Right Side Content / End -->
+
+		</div>
+	</div>
+	<!-- Header / End -->
+
+</header>
+<div class="clearfix"></div>
+<!-- Header Container / End -->
+
+<!-- Spacer -->
+<div class="margin-top-90"></div>
+<!-- Spacer / End-->
+
+<!-- Page Content
+================================================== -->
+<div class="container">
+	<div class="row">
+		<div class="col-xl-3 col-lg-4">
+			<div class="sidebar-container">
+				
+				<!-- Salary -->
+				<div class="dashboard-nav bootstrap-select">
+					<ul>
+						<li><a href="#" style="font-size: 15px; padding-left: 16px; box-shadow: 0.5px 0.5px 0.5px 0 rgba(0.2, 0.2, 0.2, 0.2)"><i class="icon-material-outline-speaker-notes"></i> Order by <strong>Subtitle</strong></a>
+							<ul id='dropsub'>
+								
+							</ul>	
+						</li>
+	
+					</ul>
+				</div>
+
+
+				<!-- Category -->
+				<div class="sidebar-widget">
+					<h3>Category</h3>
+					<select id="listoffer" class="selectpicker" data-selected-text-format="count" data-size="7" title="All Categories">
+						
+					</select>
+				</div>
+				
+				<!-- Tags -->
+				<div class="sidebar-widget">
+					<h3>Tags</h3>
+
+					<div id='skillgain' class="tags-container">
+						
+					</div>
+					<div class="clearfix"></div>
+				</div>
+
+			</div>
+		</div>
+		<div class="col-xl-9 col-lg-8 content-left-offset">
+
+			<h3 class="page-title">Search Results</h3>
+
+			<div id='searchsuggest'>
+
+			</div>
+			<div id='searchword'>
+
+			</div>
+			<br>
+			<div id='keywordfillter' class="keywords-list" style="height: auto;">	
+				<span id="offer" class="keyword">
+					
+				</span>
+				<span id="skill" class="keyword">
+					
+				</span>
+			</div>
+			<br>
+			<div id='searchresult' class="listings-container compact-list-layout margin-top-35">
+				
+			</div>
+
+		</div>
+	</div>
+</div>
+
+
+<!-- Footer
+================================================== -->
+<div id="footer">
+	
+
+	
+	<!-- Footer Copyrights -->
+	<div class="footer-bottom-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-12">
+					© 2018 <strong>Hireo</strong>. All Rights Reserved.
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Footer Copyrights / End -->
+
+</div>
+<!-- Footer / End -->
+
+</div>
+<!-- Wrapper / End -->
+<!-- Sign In Popup
+================================================== -->
+<div id="sign-in-dialog" class="zoom-anim-dialog mfp-hide dialog-with-tabs">
+
+	<!--Tabs -->
+	<div class="sign-in-form">
+
+		<ul class="popup-tabs-nav">
+			<li><a href="#login">Log In</a></li>
+			<li><a href="#register">Register</a></li>
+			<li><a href="#devacc">Testing Account</a></li>
+		</ul>
+
+		<div class="popup-tabs-container">
+
+			<!-- Login -->
+			<div class="popup-tab-content" id="login">
+				
+				<!-- Welcome Text -->
+				<div class="welcome-text">
+					<h3>We're glad to see you again!</h3>
+					<span>Don't have an account? <a href="#" class="register-tab">Sign Up!</a></span>
+				</div>
+					
+				<!-- Form -->
+				<form method="post" id="login-form">
+					<div class="input-with-icon-left">
+						<i class="icon-material-baseline-mail-outline"></i>
+						<input type="text" class="input-text with-border" name="emailaddress" id="emailaddress" placeholder="Email Address" required/>
+					</div>
+
+					<div class="input-with-icon-left">
+						<i class="icon-material-outline-lock"></i>
+						<input type="password" class="input-text with-border" name="password" id="password" placeholder="Password" required/>
+					</div>
+					<a href="#" class="forgot-password">Forgot Password?</a>
+				</form>
+				
+				<!-- Button -->
+				<button class="button full-width button-sliding-icon ripple-effect" type="submit" form="login-form">Log In <i class="icon-material-outline-arrow-right-alt"></i></button>
+				
+				<!-- Social Login -->
+				<div class="social-login-separator"><span>or</span></div>
+				<div class="social-login-buttons">
+					<button class="facebook-login ripple-effect"><i class="icon-brand-facebook-f"></i> Log In via Facebook</button>
+					<button class="google-login ripple-effect"><i class="icon-brand-google-plus-g"></i> Log In via Google+</button>
+				</div>
+
+			</div>
+
+			<!-- Register -->
+			<div class="popup-tab-content" id="register">
+				
+				<!-- Welcome Text -->
+				<div class="welcome-text">
+					<h3>Let's create your account!</h3>
+				</div>
+
+				<!-- Account Type -->
+				<div class="account-type">
+					<div>
+						<input type="radio" name="account-type-radio" id="freelancer-radio" class="account-type-radio" checked/>
+						<label for="freelancer-radio" class="ripple-effect-dark"><i class="icon-material-outline-account-circle"></i> Freelancer</label>
+					</div>
+
+					<div>
+						<input type="radio" name="account-type-radio" id="employer-radio" class="account-type-radio"/>
+						<label for="employer-radio" class="ripple-effect-dark"><i class="icon-material-outline-business-center"></i> Employer</label>
+					</div>
+				</div>
+					
+				<!-- Form -->
+				<form method="post" id="register-account-form">
+					<div class="input-with-icon-left">
+						<i class="icon-material-baseline-mail-outline"></i>
+						<input type="text" class="input-text with-border" name="emailaddress-register" id="emailaddress-register" placeholder="Email Address" required/>
+					</div>
+
+					<div class="input-with-icon-left" title="Should be at least 8 characters long" data-tippy-placement="bottom">
+						<i class="icon-material-outline-lock"></i>
+						<input type="password" class="input-text with-border" name="password-register" id="password-register" placeholder="Password" required/>
+					</div>
+
+					<div class="input-with-icon-left">
+						<i class="icon-material-outline-lock"></i>
+						<input type="password" class="input-text with-border" name="password-repeat-register" id="password-repeat-register" placeholder="Repeat Password" required/>
+					</div>
+				</form>
+				
+				<!-- Button -->
+				<button class="margin-top-10 button full-width button-sliding-icon ripple-effect" type="submit" form="register-account-form">Register <i class="icon-material-outline-arrow-right-alt"></i></button>
+				
+				<!-- Social Login -->
+				<div class="social-login-separator"><span>or</span></div>
+				<div class="social-login-buttons">
+					<button class="facebook-login ripple-effect"><i class="icon-brand-facebook-f"></i> Register via Facebook</button>
+					<button class="google-login ripple-effect"><i class="icon-brand-google-plus-g"></i> Register via Google+</button>
+				</div>
+
+			</div>
+			<!-- Dev Account -->
+			<div class="popup-tab-content" id="devacc">
+				<button onclick="logIntoDev('dev1')" class="margin-top-10 button full-width button-sliding-icon ripple-effect">Developer 1 <i class="icon-material-outline-arrow-right-alt"></i></button>
+				<button onclick="logIntoDev('dev2')" class="margin-top-10 button full-width button-sliding-icon ripple-effect">Developer 2 <i class="icon-material-outline-arrow-right-alt"></i></button>
+				<button onclick="logIntoDev('dev3')" class="margin-top-10 button full-width button-sliding-icon ripple-effect">Developer 3 <i class="icon-material-outline-arrow-right-alt"></i></button>
+
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Sign In Popup / End -->
+
+
+
+<!-- Scripts
+================================================== -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/jquery-migrate-3.0.0.min.js"></script>
+<script src="js/mmenu.min.js"></script>
+<script src="js/tippy.all.min.js"></script>
+<script src="js/simplebar.min.js"></script>
+<script src="js/bootstrap-slider.min.js"></script>
+<script src="js/bootstrap-select.min.js"></script>
+<script src="js/snackbar.js"></script>
+<script src="js/clipboard.min.js"></script>
+<script src="js/counterup.min.js"></script>
+<script src="js/magnific-popup.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/custom.js"></script>
+<script src="Scripts/Search.js"></script>
+<script src="Scripts/UserHandle.js"></script>
+
+<!-- Snackbar // documentation: https://www.polonel.com/snackbar/ -->
+<script>
+// Snackbar for user status switcher
+$('#snackbar-user-status label').click(function() { 
+	Snackbar.show({
+		text: 'Your status has been changed!',
+		pos: 'bottom-center',
+		showAction: false,
+		actionText: "Dismiss",
+		duration: 3000,
+		textColor: '#fff',
+		backgroundColor: '#383838'
+	}); 
+}); 
+</script>
+
+<!-- Google Autocomplete -->
+<script>
+	function initAutocomplete() {
+		 var options = {
+		  types: ['(cities)'],
+		  // componentRestrictions: {country: "us"}
+		 };
+
+		 var input = document.getElementById('autocomplete-input');
+		 var autocomplete = new google.maps.places.Autocomplete(input, options);
+	}
+	function detailCourse(pram){
+		var current = sessionStorage.getItem('user_action_click');
+		if(sessionStorage.getItem('user')!=undefined){
+			if(!current){
+				current = [{
+					'page': pram.id,
+					'click_count': 1
+				}]
+				sessionStorage.setItem('user_action_click',JSON.stringify(current));
+			}else{
+				current = JSON.parse(current);
+				for(var i = 0; i < current.length; i++){
+					if(current[i].page == pram.id){
+						current[i].click_count += 1
+						break
+					}
+					else{
+						if(i==current.length-1){
+							current.push({
+								'page': pram.id,
+								'click_count': 0
+							})	
+						}
+					}
+				}
+				sessionStorage.setItem('user_action_click',JSON.stringify(current));
+			}
+		}
+		window.location.href = "detail-course.html?tag="+ pram.id;
+	}
+	function searchResult(){
+		query = document.getElementById('intro-keywords').value;
+		window.location.href = "course.html?q="+ query;
+	}
+	function filterOffer(pram){
+		window.location.href += '&offer_by=' + pram.id;
+		
+	}
+	function filterSkill(pram){
+		
+		window.location.href += '&skill_gain=' + pram.id;
+		if(window.location.href.split('&skill_gain').length != 1){
+			if(window.location.href.split('&skill_gain')[1].split('&').length != 1){
+				window.location.href = window.location.href.split('&skill_gain=')[0] + '&skill_gain=' +pram.id + '&' + window.location.href.split('&')[2];
+			}else{
+				window.location.href = window.location.href.split('&skill_gain=')[0] + '&skill_gain=' +pram.id;
+			}
+		}
+		
+	}
+	q = window.location.href.split("?q=")[1].split('&')[0];
+  	let query_string = '';
+  	if (q != undefined) {
+    	for(var i = 0; i <q.split("%20").length; i++){
+      		query_string += q.split("%20")[i] + ' ';
+    	}
+  	}
+	let a = [];
+	function filterSub(obj){
+		document.getElementById("searchresult").innerHTML  = '';
+		if(obj.checked == true){
+			a.push(obj.id);
+			
+			//console.log(obj.value)
+			gen_filled_course(str_sub(a))
+		}
+		else{
+			a.splice(a.indexOf(obj.id),1)
+			gen_filled_course(str_sub(a))
+		}
+	}
+	function str_sub(lst){
+		str = ''
+		for (var i = 0; i < lst.length; i++){
+			str += lst[i] + ',';
+		}
+		return str.slice(0, -1);
+	}
+	function gen_filled_course(list_sub){
+		var s = document.getElementById("skill").innerText;
+		var o = document.getElementById("offer").innerText;
+		$.ajax({
+				url: "http://127.0.0.1:8000/api/course-list", //http://27.78.33.234:8000/api/course-list
+				type: "POST",
+				dataType: "json",
+				data: {
+					queries: query_string.trim(),
+					filter: list_sub,
+					flag: 1	
+				},
+				success: function (result) {
+					
+					for (var i = 0; i < result.result.courses.length; i++) {
+						if(result.result.courses[i]._source.offer_by==null){
+          					result.result.courses[i]._source.offer_by = 'None'
+        				}
+        				if(result.result.courses[i]._source.skill_gain==null){
+          					result.result.courses[i]._source.skill_gain = 'None'
+        				}
+						if((result.result.courses[i]._source.offer_by.indexOf(o) > -1 || o == '\n\t\t\t\t\t\n\t\t\t\t')
+          				&& (result.result.courses[i]._source.skill_gain.indexOf(s) > -1 || s == '\n\t\t\t\t\t\n\t\t\t\t')){
+							document.getElementById("searchresult").innerHTML +=
+							'<a id="' +
+							result.result.courses[i]._source.course_tag +
+							'" onclick="detailCourse(this)" style="cursor:pointer" class="job-listing">' +
+							'<div class="job-listing-details">' +
+							'<div class="job-listing-company-logo">' +
+							'<img src="' +
+							result.result.courses[i]._source.course_image +
+							'" style="width:50px;height:50px;" alt="">' +
+							"</div>" +
+							'<div class="job-listing-description">' +
+							'<h3 class="job-listing-title">' +
+							result.result.courses[i]._source.course_title +
+							"</h3>" +
+							'<div class="job-listing-footer">' +
+							"<ul>" +
+							'<li><i class="icon-material-outline-location-city"></i> ' +
+							result.result.courses[i]._source.offer_by +
+							' <div class="verified-badge" title="Verified Employer" data-tippy-placement="top"></div></li>' +
+							'<li><i class="icon-material-outline-language"></i> ' +
+							result.result.courses[i]._source.language +
+							"</li>" +
+							'<li><i class="icon-material-outline-star-border"></i> ' +
+							result.result.courses[i]._source.rating +
+							"</li>" +
+							'<li><i class="icon-material-outline-person-pin"></i> ' +
+							result.result.courses[i]._source.enrolled +
+							"</li>" +
+							"</ul>" +
+							"<div>" +
+							"</div>" +
+							"</div>";
+						}
+					}
+				}
+			})
+	}
+
+	$(document).on('click', '.skill-remove', function() {
+		document.getElementById('skill').classList.add('keyword-removed')
+		if(window.location.href.split('&skill_gain')[0].split('&').length != 1 
+		|| window.location.href.split('&skill_gain')[1].split('&').length == 1){
+			window.location.href = window.location.href.split('&skill_gain')[0]
+		}else{
+			window.location.href = window.location.href.split('&skill_gain')[0] + '&offer_by'+ window.location.href.split('&offer_by')[1]
+		}
+	});
+	$(document).on('click', '.offer-remove', function() {
+		document.getElementById('offer').classList.add('keyword-removed')
+		if(window.location.href.split('&offer_by')[0].split('&').length != 1 
+		|| window.location.href.split('&offer_by')[1].split('&').length == 1){
+			window.location.href = window.location.href.split('&offer_by')[0]
+		}else{
+			window.location.href = window.location.href.split('&offer_by')[0] + '&skill_gain'+ window.location.href.split('&skill_gain')[1]
+		}
+	});
+</script>
+
+<!-- Google API & Maps -->
+<!-- Geting an API Key: https://developers.google.com/maps/documentation/javascript/get-api-key -->
+
+
+</body>
+</html>

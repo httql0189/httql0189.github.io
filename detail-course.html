@@ -1,0 +1,607 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+<!-- Basic Page Needs
+================================================== -->
+<title>Hireo</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<!-- CSS
+================================================== -->
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/colors/blue.css">
+<link rel="stylesheet" href="css/search.css">
+</head>
+<body>
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+<!-- Header Container
+================================================== -->
+<header id="header-container" class="fullwidth">
+
+	<!-- Header -->
+	<div id="header">
+		<div class="container">
+			
+			<!-- Left Side Content -->
+			<div class="left-side">
+				
+				<!-- Logo -->
+				<div id="logo">
+					<a href="index.html"><img src="images/logo.png" alt=""></a>
+				</div>
+
+				<!-- Main Navigation -->
+				<nav id="navigation">
+					<ul id="responsive">
+
+						<li><a href="index.html">Home</a>
+							
+						</li>
+
+						<li><a href="course-list.html" class="current">Courses</a></li>
+
+					</ul>
+				</nav>
+				<div class="clearfix"></div>
+				<!-- Main Navigation / End -->
+				
+			</div>
+			<!-- Left Side Content / End -->
+
+
+			<!-- Right Side Content / End -->
+			<div class="right-side">
+
+				<!--  User Notifications -->
+				<div class="header-widget hide-on-mobile">
+					
+					<div class="keyword-input-container" style="
+					margin-top: 15px;
+					width: 400px;
+					">
+						<input id="intro-keywords" type="text" class="keyword-input" placeholder="Search for 2,000 courses">
+						<button class="keyword-input-button ripple-effect" onclick="searchResult()"><i class="icon-feather-search"></i></button>
+					</div>
+
+				</div>
+				<!--  User Notifications / End -->
+
+				<!-- User Menu -->
+				<div class="header-widget">
+
+					
+					<a href="#sign-in-dialog" class="popup-with-zoom-anim log-in-button"><i class="icon-feather-log-in"></i> <span>Log In / Register</span></a>
+					<!-- Messages -->
+					<div id="user-dropdown" class="header-notifications user-menu">
+						<div class="header-notifications-trigger">
+							<a href="#"><div class="user-avatar status-online"><img src="https://i.9mobi.vn/cf/Images/son/2020/3/26/cach-lam-anh-dai-dien-facebook-trong-khong-14.jpg" alt=""></div></a>
+						</div>
+
+						<!-- Dropdown -->
+						<div class="header-notifications-dropdown">
+
+							<!-- User Status -->
+							<div class="user-status">
+
+								<!-- User Name / Avatar -->
+								<div class="user-details">
+									<div class="user-avatar status-online"><img src="https://i.9mobi.vn/cf/Images/son/2020/3/26/cach-lam-anh-dai-dien-facebook-trong-khong-14.jpg" alt=""></div>
+									<div class="user-name" id='username'>
+										
+									</div>
+								</div>
+						</div>
+						
+						<ul class="user-menu-small-nav">
+							<li><a href="dashboard.html"><i class="icon-material-outline-dashboard"></i> Dashboard</a></li>
+							<li><a href="dashboard-settings.html"><i class="icon-material-outline-settings"></i> Settings</a></li>
+							<li><a onclick="logout()" style="cursor: pointer;"><i class="icon-material-outline-power-settings-new"></i> Logout</a></li>
+						</ul>
+
+						</div>
+					</div>
+
+				</div>
+				<!-- User Menu / End -->
+
+				<!-- Mobile Navigation Button -->
+				<span class="mmenu-trigger">
+					<button class="hamburger hamburger--collapse" type="button">
+						<span class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						</span>
+					</button>
+				</span>
+
+			</div>
+			<!-- Right Side Content / End -->
+
+		</div>
+	</div>
+	<!-- Header / End -->
+
+</header>
+<div class="clearfix"></div>
+<!-- Header Container / End -->
+
+
+
+<!-- Titlebar
+================================================== -->
+<div class="single-page-header" data-background-image="images/single-job.jpg">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="single-page-header-inner">
+					<div class="left-side">
+						<div id='image' class="header-image"></div>
+						<div id='headertitle' class="header-details">
+							
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- Page Content
+================================================== -->
+<div class="container">
+	<div class="row">
+		
+		<!-- Content -->
+		<div class="col-xl-8 col-lg-8 content-right-offset">
+
+			<div id="about" class="single-page-section">
+				
+			</div>
+
+
+			<div class="single-page-section">
+				<h3 class="margin-bottom-25">Similar Courses</h3>
+
+				<!-- Listings Container -->
+				<div id="relatedcourse" class="listings-container grid-layout">
+
+						
+
+					</div>
+					<!-- Listings Container / End -->
+
+				</div>
+		</div>
+		
+
+		<!-- Sidebar -->
+		<div class="col-xl-4 col-lg-4">
+			<div class="sidebar-container">
+				<div id='direct'>
+
+				</div>
+				
+					
+				<!-- Sidebar Widget -->
+				<div class="sidebar-widget">
+					<div class="job-overview">
+						<div class="job-overview-headline">Course Sumary</div>
+						<div id='meta' class="job-overview-inner">
+							
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Boxed List -->
+		<div class="boxed-list margin-bottom-60">
+			<div class="boxed-list-headline">
+				<h3><i class="icon-material-outline-thumb-up"></i> Work History and Feedback</h3>
+			</div>
+			<ul id="review" class="boxed-list-ul">
+				
+			</ul>
+
+			<!-- Pagination -->
+			<div class="clearfix"></div>
+			<div class="pagination-container margin-top-40 margin-bottom-10">
+				<nav class="pagination">
+					<ul>
+						<li class="pagination-arrow"><a id="previousClick" value="0" onclick="previousPageFunc(this)"><i class="icon-material-outline-keyboard-arrow-left"></i></a></li>
+				
+						<li class="pagination-arrow"><a id="nextClick" value="5" onclick="nextPageFunc(this)"><i class="icon-material-outline-keyboard-arrow-right"></i></a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="clearfix"></div>
+			<!-- Pagination / End -->
+
+		</div>
+		<!-- Boxed List / End -->
+
+
+	</div>
+</div>
+
+
+<!-- Footer
+================================================== -->
+<div id="footer">
+	
+	<!-- Footer Top Section -->
+	<div class="footer-top-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-12">
+
+					<!-- Footer Rows Container -->
+					<div class="footer-rows-container">
+						
+						<!-- Left Side -->
+						<div class="footer-rows-left">
+							<div class="footer-row">
+								<div class="footer-row-inner footer-logo">
+									<img src="images/logo2.png" alt="">
+								</div>
+							</div>
+						</div>
+						
+						<!-- Right Side -->
+						<div class="footer-rows-right">
+
+							<!-- Social Icons -->
+							<div class="footer-row">
+								<div class="footer-row-inner">
+									<ul class="footer-social-links">
+										<li>
+											<a href="#" title="Facebook" data-tippy-placement="bottom" data-tippy-theme="light">
+												<i class="icon-brand-facebook-f"></i>
+											</a>
+										</li>
+										<li>
+											<a href="#" title="Twitter" data-tippy-placement="bottom" data-tippy-theme="light">
+												<i class="icon-brand-twitter"></i>
+											</a>
+										</li>
+										<li>
+											<a href="#" title="Google Plus" data-tippy-placement="bottom" data-tippy-theme="light">
+												<i class="icon-brand-google-plus-g"></i>
+											</a>
+										</li>
+										<li>
+											<a href="#" title="LinkedIn" data-tippy-placement="bottom" data-tippy-theme="light">
+												<i class="icon-brand-linkedin-in"></i>
+											</a>
+										</li>
+									</ul>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+							
+							<!-- Language Switcher -->
+							<div class="footer-row">
+								<div class="footer-row-inner">
+									<select class="selectpicker language-switcher" data-selected-text-format="count" data-size="5">
+										<option selected>English</option>
+										<option>Français</option>
+										<option>Español</option>
+										<option>Deutsch</option>
+									</select>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!-- Footer Rows Container / End -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Footer Top Section / End -->
+
+	<!-- Footer Middle Section -->
+	<div class="footer-middle-section">
+
+	</div>
+
+</div>
+<!-- Footer / End -->
+
+</div>
+<!-- Wrapper / End -->
+
+
+<!-- Apply for a job popup
+================================================== -->
+<div id="small-dialog" class="zoom-anim-dialog mfp-hide dialog-with-tabs">
+
+	<!--Tabs -->
+	<div class="sign-in-form">
+
+		<ul class="popup-tabs-nav">
+			<li><a href="#tab">Apply Now</a></li>
+		</ul>
+
+		<div class="popup-tabs-container">
+
+			<!-- Tab -->
+			<div class="popup-tab-content" id="tab">
+				
+				<!-- Welcome Text -->
+				<div class="welcome-text">
+					<h3>Attach File With CV</h3>
+				</div>
+					
+				<!-- Form -->
+				<form method="post" id="apply-now-form">
+
+					<div class="input-with-icon-left">
+						<i class="icon-material-outline-account-circle"></i>
+						<input type="text" class="input-text with-border" name="name" id="name" placeholder="First and Last Name" required/>
+					</div>
+
+					<div class="input-with-icon-left">
+						<i class="icon-material-baseline-mail-outline"></i>
+						<input type="text" class="input-text with-border" name="emailaddress" id="emailaddress" placeholder="Email Address" required/>
+					</div>
+
+					<div class="uploadButton">
+						<input class="uploadButton-input" type="file" accept="image/*, application/pdf" id="upload-cv" />
+						<label class="uploadButton-button ripple-effect" for="upload-cv">Select File</label>
+						<span class="uploadButton-file-name">Upload your CV / resume relevant file. <br> Max. file size: 50 MB.</span>
+					</div>
+
+				</form>
+				
+				<!-- Button -->
+				<button class="button margin-top-35 full-width button-sliding-icon ripple-effect" type="submit" form="apply-now-form">Apply Now <i class="icon-material-outline-arrow-right-alt"></i></button>
+
+			</div>
+
+		</div>
+	</div>
+</div>
+<!-- Apply for a job popup / End -->
+<!-- Sign In Popup
+================================================== -->
+<div id="sign-in-dialog" class="zoom-anim-dialog mfp-hide dialog-with-tabs">
+
+	<!--Tabs -->
+	<div class="sign-in-form">
+
+		<ul class="popup-tabs-nav">
+			<li><a href="#login">Log In</a></li>
+			<li><a href="#register">Register</a></li>
+			<li><a href="#devacc">Testing Account</a></li>
+		</ul>
+
+		<div class="popup-tabs-container">
+
+			<!-- Login -->
+			<div class="popup-tab-content" id="login">
+				
+				<!-- Welcome Text -->
+				<div class="welcome-text">
+					<h3>We're glad to see you again!</h3>
+					<span>Don't have an account? <a href="#" class="register-tab">Sign Up!</a></span>
+				</div>
+					
+				<!-- Form -->
+				<form method="post" id="login-form">
+					<div class="input-with-icon-left">
+						<i class="icon-material-baseline-mail-outline"></i>
+						<input type="text" class="input-text with-border" name="emailaddress" id="emailaddress" placeholder="Email Address" required/>
+					</div>
+
+					<div class="input-with-icon-left">
+						<i class="icon-material-outline-lock"></i>
+						<input type="password" class="input-text with-border" name="password" id="password" placeholder="Password" required/>
+					</div>
+					<a href="#" class="forgot-password">Forgot Password?</a>
+				</form>
+				
+				<!-- Button -->
+				<button class="button full-width button-sliding-icon ripple-effect" type="submit" form="login-form">Log In <i class="icon-material-outline-arrow-right-alt"></i></button>
+				
+				<!-- Social Login -->
+				<div class="social-login-separator"><span>or</span></div>
+				<div class="social-login-buttons">
+					<button class="facebook-login ripple-effect"><i class="icon-brand-facebook-f"></i> Log In via Facebook</button>
+					<button class="google-login ripple-effect"><i class="icon-brand-google-plus-g"></i> Log In via Google+</button>
+				</div>
+
+			</div>
+
+			<!-- Register -->
+			<div class="popup-tab-content" id="register">
+				
+				<!-- Welcome Text -->
+				<div class="welcome-text">
+					<h3>Let's create your account!</h3>
+				</div>
+
+				<!-- Account Type -->
+				<div class="account-type">
+					<div>
+						<input type="radio" name="account-type-radio" id="freelancer-radio" class="account-type-radio" checked/>
+						<label for="freelancer-radio" class="ripple-effect-dark"><i class="icon-material-outline-account-circle"></i> Freelancer</label>
+					</div>
+
+					<div>
+						<input type="radio" name="account-type-radio" id="employer-radio" class="account-type-radio"/>
+						<label for="employer-radio" class="ripple-effect-dark"><i class="icon-material-outline-business-center"></i> Employer</label>
+					</div>
+				</div>
+					
+				<!-- Form -->
+				<form method="post" id="register-account-form">
+					<div class="input-with-icon-left">
+						<i class="icon-material-baseline-mail-outline"></i>
+						<input type="text" class="input-text with-border" name="emailaddress-register" id="emailaddress-register" placeholder="Email Address" required/>
+					</div>
+
+					<div class="input-with-icon-left" title="Should be at least 8 characters long" data-tippy-placement="bottom">
+						<i class="icon-material-outline-lock"></i>
+						<input type="password" class="input-text with-border" name="password-register" id="password-register" placeholder="Password" required/>
+					</div>
+
+					<div class="input-with-icon-left">
+						<i class="icon-material-outline-lock"></i>
+						<input type="password" class="input-text with-border" name="password-repeat-register" id="password-repeat-register" placeholder="Repeat Password" required/>
+					</div>
+				</form>
+				
+				<!-- Button -->
+				<button class="margin-top-10 button full-width button-sliding-icon ripple-effect" type="submit" form="register-account-form">Register <i class="icon-material-outline-arrow-right-alt"></i></button>
+				
+				<!-- Social Login -->
+				<div class="social-login-separator"><span>or</span></div>
+				<div class="social-login-buttons">
+					<button class="facebook-login ripple-effect"><i class="icon-brand-facebook-f"></i> Register via Facebook</button>
+					<button class="google-login ripple-effect"><i class="icon-brand-google-plus-g"></i> Register via Google+</button>
+				</div>
+
+			</div>
+			<!-- Dev Account -->
+			<div class="popup-tab-content" id="devacc">
+				<button onclick="logIntoDev('dev1')" class="margin-top-10 button full-width button-sliding-icon ripple-effect">Developer 1 <i class="icon-material-outline-arrow-right-alt"></i></button>
+				<button onclick="logIntoDev('dev2')" class="margin-top-10 button full-width button-sliding-icon ripple-effect">Developer 2 <i class="icon-material-outline-arrow-right-alt"></i></button>
+				<button onclick="logIntoDev('dev3')" class="margin-top-10 button full-width button-sliding-icon ripple-effect">Developer 3 <i class="icon-material-outline-arrow-right-alt"></i></button>
+
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Sign In Popup / End -->
+
+<!-- Scripts
+================================================== -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/jquery-migrate-3.0.0.min.js"></script>
+<script src="js/mmenu.min.js"></script>
+<script src="js/tippy.all.min.js"></script>
+<script src="js/simplebar.min.js"></script>
+<script src="js/bootstrap-slider.min.js"></script>
+<script src="js/bootstrap-select.min.js"></script>
+<script src="js/snackbar.js"></script>
+<script src="js/clipboard.min.js"></script>
+<script src="js/counterup.min.js"></script>
+<script src="js/magnific-popup.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/custom.js"></script>
+<script src="Scripts/DetailCourse.js"></script>
+<script src="Scripts/Search.js"></script>
+<script src="Scripts/UserHandle.js"></script>
+<!-- Snackbar // documentation: https://www.polonel.com/snackbar/ -->
+<script>
+// Snackbar for user status switcher
+$('#snackbar-user-status label').click(function() { 
+	Snackbar.show({
+		text: 'Your status has been changed!',
+		pos: 'bottom-center',
+		showAction: false,
+		actionText: "Dismiss",
+		duration: 3000,
+		textColor: '#fff',
+		backgroundColor: '#383838'
+	}); 
+}); 
+$(document).ready(function() {
+  user_action = {
+	  'page':'abc',
+	  'time': 3
+  }
+  var start = new Date();
+  console.log(start);
+  $(window).unload(function() {
+      var end = new Date();
+	  var current = sessionStorage.getItem('user_action_time');
+	  if(sessionStorage.getItem('user')!=undefined){
+		if(!current){
+			current = [{
+				'page':  window.location.href.split('?tag=')[1],
+				'time_onscreen': (end-start)/1000
+			}]
+			sessionStorage.setItem('user_action_time',JSON.stringify(current));
+		}else{
+			current = JSON.parse(current);
+			for(var i = 0; i < current.length; i++){
+				if(current[i].page == window.location.href.split('?tag=')[1]){
+					current[i].time_onscreen += (end-start)/1000
+					break
+				}
+				else{
+					if(i==current.length-1){
+						current.push({
+							'page': window.location.href.split('?tag=')[1],
+							'time_onscreen': (end-start)/1000
+						})	
+					}
+					}
+			}
+			sessionStorage.setItem('user_action_time',JSON.stringify(current));
+		}
+	  }
+   });
+});
+
+// Snackbar for copy to clipboard button
+$('.copy-url-button').click(function() { 
+	Snackbar.show({
+		text: 'Copied to clipboard!',
+	}); 
+}); 
+function detailCourse(pram){
+	var current = sessionStorage.getItem('user_action_click');
+	if(sessionStorage.getItem('user')!=undefined){
+		if(!current){
+			current = [{
+				'page': pram.id,
+				'click_count': 1
+			}]
+			sessionStorage.setItem('user_action_click',JSON.stringify(current));
+		}else{
+			current = JSON.parse(current);
+			for(var i = 0; i < current.length; i++){
+				if(current[i].page == pram.id){
+					current[i].click_count += 1
+					break
+				}
+				else{
+					if(i==current.length-1){
+						current.push({
+							'page': pram.id,
+							'click_count': 0
+						})	
+					}
+				}
+			}
+			sessionStorage.setItem('user_action_click',JSON.stringify(current));
+		}
+	}
+	
+	window.location.href = "detail-course.html?tag="+ pram.id;
+}
+function searchResult(){
+	query = document.getElementById('intro-keywords').value;
+	window.location.href = "course.html?q="+ query;
+}
+</script>
+
+<!-- Google API & Maps -->
+<!-- Geting an API Key: https://developers.google.com/maps/documentation/javascript/get-api-key -->
+<script src="https://maps.googleapis.com/maps/api/js?key=&libraries=places"></script>
+<script src="js/infobox.min.js"></script>
+<script src="js/markerclusterer.js"></script>
+<script src="js/maps.js"></script>
+
+</body>
+</html>
