@@ -3,7 +3,7 @@ function generateCourse(offset){
   document.getElementById('post').innerHTML = ""
     $.ajax({
         type: "GET",
-        url: "http://127.0.0.1:8000/api/course?limit=10&offset="+offset,
+        url: "https://116.109.74.221:8000/api/course?limit=10&offset="+offset,
         contentType:"application/json",
         dataType:"json",
         success: function (data) {
@@ -17,7 +17,7 @@ $(document).ready(function(){
   document.getElementById('post').innerHTML = ""
     $.ajax({
         type: "GET",
-        url: "http://127.0.0.1:8000/api/course?limit=10&offset=0",
+        url: "https://116.109.74.221:8000/api/course?limit=10&offset=0",
         contentType:"application/json",
         dataType:"json",
         success: function (data) {
