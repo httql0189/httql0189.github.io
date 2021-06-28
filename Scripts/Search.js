@@ -47,7 +47,7 @@ $(document).ready(function () {
   }
   
   $.ajax({
-    url: "http://127.0.0.1:8000/api/course-list", //http://27.78.33.234:8000/api/course-list
+    url: "https://116.109.74.221:8000/api/course-list", //http://27.78.33.234:8000/api/course-list
     type: "POST",
     dataType: "json",
     data: {
@@ -276,7 +276,7 @@ function changeQueries(pram){
 //search-sub
 $("#intro-keywords").keyup(function () {
   $.ajax({
-    url: "http://127.0.0.1:8000/api/course-list",
+    url: "https://116.109.74.221:8000/api/course-list",
     type: "POST",
     dataType: "json",
     data: {
@@ -400,7 +400,7 @@ $("#intro-keywords-main").keydown(function () {
 $("#intro-keywords-main").keyup(function () {
  
   $.ajax({
-    url: "http://127.0.0.1:8000/api/course-list",
+    url: "https://116.109.74.221:8000/api/course-list",
     type: "POST",
     dataType: "json",
     data: {
