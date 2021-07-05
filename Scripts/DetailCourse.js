@@ -2,7 +2,7 @@ lst_review = []
 $(document).ready(function(){
     q = window.location.href.split('?tag=')[1]
     $.ajax({
-        url : "https://116.109.74.221:8000/api/course?course_tag="+q,
+        url : "https://116.109.190.111:8000/api/course?course_tag="+q,
         type : "GET",
         contentType:"application/json",
         dataType:"json",
@@ -42,7 +42,7 @@ $(document).ready(function(){
                         ' </ul>'
             //Handling related course
             $.ajax({
-                url:'https://116.109.74.221:8000/api/relatedcourse?keyword='+result[0].keyword,
+                url:'https://116.109.190.111:8000/api/relatedcourse?keyword='+result[0].keyword,
                 type : "GET",
                 contentType:"application/json",
                 dataType:"json",

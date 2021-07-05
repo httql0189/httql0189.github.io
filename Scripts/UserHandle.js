@@ -5,7 +5,7 @@ $('#user-dropdown').click(function(){
 
 function logIntoDev(username){
     $.ajax({
-        url: "https://116.109.74.221:8000/api/user?username=" + username, //http://27.78.33.234:8000/api/course-list
+        url: "https://116.109.190.111:8000/api/user?username=" + username, //http://27.78.33.234:8000/api/course-list
         type: "GET",
         dataType: "json",
         success: function (result) {
@@ -28,7 +28,7 @@ function logIntoDev(username){
 }
 function logout(){
     $.ajax({
-        url: "https://116.109.74.221:8000/api/getuseraction", //http://27.78.33.234:8000/api/course-list
+        url: "https://116.109.190.111:8000/api/getuseraction", //http://27.78.33.234:8000/api/course-list
         type: "POST",
         dataType: "json",
         data: {
@@ -63,7 +63,7 @@ $(document).ready(function (){
 
   $.ajax({
     type: "GET",
-    url: "https://116.109.74.221:8000/course?review_option=on",
+    url: "https://116.109.190.111:8000/course?review_option=on",
     contentType:"application/json",
     dataType:"json",
     success: function (data) {
@@ -83,7 +83,7 @@ function courseForYou(username){
     k1 = JSON.parse(sessionStorage.getItem('data')).time_onscreen_page;
     k2 = JSON.parse(sessionStorage.getItem('data')).most_url_click;
     $.ajax({
-        url: "https://116.109.74.221:8000/api/courseforuser?k1=" + k1 + "&k2=" + k2, //http://27.78.33.234:8000/api/course-list
+        url: "https://116.109.190.111:8000/api/courseforuser?k1=" + k1 + "&k2=" + k2, //http://27.78.33.234:8000/api/course-list
         type: "GET",
         dataType: "json",
         success: function (result) {
