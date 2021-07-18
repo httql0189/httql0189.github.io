@@ -430,14 +430,12 @@ $("#intro-keywords-main").keyup(function () {
                 '<a id="' +
                 data.result.courses[i]._source.course_tag +
                 '" onclick="detailCourse(this)" style="cursor:pointer" class="job-listing item">' +
-                '<div class="job-listing-details">'
-                 +
+                '<div class="job-listing-details">' +
                 '<div class="job-listing-company-logo">' +
                 '<img src="' +
                 data.result.courses[i]._source.course_image +
                 '" style="width:50px;height:50px;" alt="">' +
-                "</div>" 
-                +
+                "</div>" +
                 '<div class="job-listing-description">' +
                 '<h3 class="job-listing-title">' +
                 data.result.courses[i]._source.course_title +
@@ -466,7 +464,7 @@ $("#intro-keywords-main").keyup(function () {
             }
             $('.loader').hide();
             $('.button.ripple-effect').show();
-         }, 0);  
+         }, 1000);  
         
       document
       .getElementById("intro-keywords-main")
